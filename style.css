@@ -1,0 +1,84 @@
+/* Full-screen background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper for game layout */
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling */
+.main-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Translucent game board container */
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* Grid layout for board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+}
+
+/* Cell styling */
+.cell {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #ffffff80;
+  border-radius: 10px;
+  font-size: 2rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Button aligned to bottom right of container */
+.button-wrapper {
+  position: absolute;
+  border-radius: 2px;
+  bottom: 180px;
+  right: 450px;
+}
+
+/* Button with black / matching palette color */
+.reset-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.7); /* translucent black */
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
